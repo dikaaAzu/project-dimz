@@ -1,11 +1,11 @@
 #!/bin/sh
 
-# Ganti UUID_PLACEHOLDER dengan UUID dari Environment Variable Railway (jika ada)
+# Mengganti placeholder UUID dengan UUID dari Environment Variable Railway
 if [ -n "$UUID" ]; then
-  sed -i "s/UUID_PLACEHOLDER/$UUID/g" /etc/v2ray/config.json
+  sed -i "s/85e0c57f-b259-48a7-b21d-cc5b1e70594f/$UUID/g" /etc/v2ray/config.json
 fi
 
-# Mengganti port default (10000) dengan port dari environment Railway ($PORT)
+# Mengganti port 10000 dengan port dinamis dari Railway ($PORT)
 if [ -n "$PORT" ]; then
   sed -i "s/\"port\": 10000/\"port\": $PORT/g" /etc/v2ray/config.json
 fi
