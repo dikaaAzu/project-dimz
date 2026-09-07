@@ -10,5 +10,5 @@ if [ -n "$PORT" ]; then
   sed -i "s/\"port\": 443/\"port\": $PORT/g" /etc/v2ray/config.json
 fi
 
-# Menjalankan V2Ray
-exec /usr/bin/v2ray/v2ray -config /etc/v2ray/config.json
+# Menjalankan V2Ray dengan format perintah yang benar (tanpa tanda strip di depan config)
+exec /usr/bin/v2ray/v2ray run -config /etc/v2ray/config.json
