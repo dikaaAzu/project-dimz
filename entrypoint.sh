@@ -7,7 +7,7 @@ fi
 
 # Mengganti port 10000 dengan port dinamis dari Railway ($PORT)
 if [ -n "$PORT" ]; then
-  sed -i "s/\"port\": 10000/\"port\": $PORT/g" /etc/v2ray/config.json
+  sed -i "s/\"port\": 443/\"port\": $PORT/g" /etc/v2ray/config.json
 fi
 
 # Menjalankan V2Ray
