@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # Ganti UUID_PLACEHOLDER dengan UUID dari Environment Variable Railway (jika ada)
 if [ -n "$UUID" ]; then
@@ -11,4 +11,4 @@ if [ -n "$PORT" ]; then
 fi
 
 # Menjalankan V2Ray
-exec v2ray -config /etc/v2ray/config.json
+exec /usr/bin/v2ray/v2ray -config /etc/v2ray/config.json
